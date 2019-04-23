@@ -65,6 +65,7 @@ public:
     }
 
     void pop() {
+        if (empty()) throw std::runtime_error("Empty queue!");
         auto it = head;
         head = head->next;
         delete it;
